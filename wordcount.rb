@@ -3,11 +3,12 @@
 #
 #  input   = The given content (a Liquid tag).
 #  content = Removes the input's HTML tags.
-#  count   = Scans the content for words. Returns the number of counted words.
 #
-#  word_count = Returns the same value as count.
-#  time_count = Return the value of count divided by 5, which is the average
-#               number of words people read during a second.
+#  count_words   = Returns the word count.
+#  count_seconds = Returns the seconds by dividing the word count by 5,
+#                  which is how many words the average person reads per second.
+#  calculate     = Strips the given input content's HTML tags and returns
+#                  the number of counted words.
 #
 #  Usage:
 #  {{ content | count_words }}
@@ -16,19 +17,16 @@
 module Jekyll
   module WordCount
     def count_words(input)
-      word_count = calculate(input)
-      return "#{word_count}"
+      return calculate(input)
     end
 
     def count_seconds(input)
-      time_count = calculate(input) / 5
-      return "#{time_count}"
+      return calculate(input) / 5
     end
 
     def calculate(input)
       content = input.gsub(/<\/?[^>]*>/, "")
-      count   = content.split.size
-      return count
+      return content.split.size
     end
   end
 end
