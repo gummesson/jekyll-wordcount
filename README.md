@@ -1,6 +1,6 @@
 # Jekyll Wordcount
 
-*Wordcount* is a small plugin for adding a word count to your [Jekyll](http://jekyllrb.com/ "Jekyll") blog posts. It's essentially a simple [Liquid](http://liquidmarkup.org/ "Liquid") filter that just strips the content from all HTML tags and then counts the words. It can also calculate how long it takes to read the post based on the counted words.
+*Jekyll Wordcount* is a small plugin for adding a word count to your [Jekyll](http://jekyllrb.com/ "Jekyll") blog posts. It's essentially a simple [Liquid](http://liquidmarkup.org/ "Liquid") filter that just strips the content from all HTML tags and then counts the words. It can also calculate how long it takes to read the post based on the counted words.
 
 ## Usage
 
