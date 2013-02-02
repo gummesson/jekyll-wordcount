@@ -1,11 +1,12 @@
 #
-# A simple word/time count plugin for Jekyll.
+# A simple word/reading time count plugin for Jekyll.
 #
-#  input         = The given content (a Liquid tag).
+#  input         = The given content (ie. a Liquid tag).
 #  count_words   = Returns the word count.
 #  count_seconds = Returns the seconds by dividing the word count by 5,
-#                  which is how many words the average person reads per second.
-#  calculate     = Strips the given input content's HTML tags and returns
+#                  which is how many words the average person reads per second
+#                  according to the almighty Google.
+#  calculate     = Removes the given content's HTML tags and returns
 #                  the number of counted words.
 #
 #  Usage:
